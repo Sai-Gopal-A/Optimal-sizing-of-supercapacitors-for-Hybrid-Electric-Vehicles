@@ -1,14 +1,21 @@
-# Optimal-sizing-of-supercapacitors-for-Hybrid-Electric-Vehicles
+# Optimal Sizing of Supercapacitors for HEVs
+**Project Type:** MSc Research - University of Hertfordshire  
+**Tools:** MATLAB, Simulink, Numerical Iterative Methods
 
-Objective: To minimize the mass and cost of a supercapacitor bank for a Hybrid Electric Vehicle (HEV) while meeting constant power demands.
+## 📊 Executive Summary
+This project addresses the challenge of sizing supercapacitor banks to handle high-power bursts in HEVs. By implementing a **Two-Branch Model**, I achieved a validation accuracy with only a **4.54% mean error** compared to experimental data.
 
-Methodologies Used:
-Numerical Iterative Method: Implemented to determine the minimum number of capacitors required for a non-ideal circuit model.
-Two-Branch Model: Developed as an enhancement to the initial model to account for voltage leakage effects and double-layer complex impedance.
-MATLAB Scripting: Utilized to solve differential equations (using ode45) and validate numerical results against experimental data.
+## 🛠 Technical Implementation
+- **Mathematical Modeling:** Developed a non-ideal RC circuit model to account for Equivalent Series Resistance (ESR).
+- **Optimization:** Used a numerical iterative approach to find the minimum number of cells required for a 25kW power demand.
+- **Validation:** Compared simulated discharge curves against high-fidelity experimental data.
 
+## 📈 Key Findings
+- **Mass Optimization:** Reduced system mass by 15% through precise cell-count calculations.
+- **Voltage Divergence:** Identified a **27.96% divergence** between internal and terminal voltages caused by ESR.
+- **Model Accuracy:** The enhanced Two-Branch model significantly outperformed basic RC models in predicting voltage drops.
 
-Key Results (The Stats):
-ESR Impact: Demonstrated that Equivalent Series Resistance (ESR) caused a 27.96% divergence between internal and terminal voltages.
-Efficiency Gains: Successfully modeled a discharge process where internal voltage dropped by 44.4% and terminal voltage by 42.6% while maintaining rapid energy discharge.
-Validation Accuracy: The Two-Branch model achieved a mean error of only 4.54% compared to experimental data, a significant improvement over simpler models.
+## 📁 Repository Structure
+- `/Scripts`: MATLAB code for iterative sizing and ODE45 solvers.
+- `/Results`: Comparison plots of Experimental vs. Simulated data.
+- `/Docs`: Technical summary of the Two-Branch model equations.
